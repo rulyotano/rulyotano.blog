@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   blog-drupal:
-    image: drupal:11.0.4-php8.3-apache-bullseye
+    image: drupal:11.0.4
     deploy:
       replicas: 1
       restart_policy:
