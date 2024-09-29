@@ -1,13 +1,13 @@
 version: "3.9"
 services:
   blog-drupal:
-    image: drupal:11.0.4
+    image: drupal:11.0.4-fpm-alpine3.20
     deploy:
       replicas: 1
       restart_policy:
         condition: on-failure
       labels:
-        - "traefik.http.services.blog.loadbalancer.server.port=80"
+        - "traefik.http.services.blog.loadbalancer.server.port=9000"
         - "traefik.http.routers.blog.rule=Host(`blog.rulyotano.com`)"
         - "traefik.http.routers.blog.tls=true"
         - "traefik.http.routers.blog.tls.certresolver=mycertresolver"
