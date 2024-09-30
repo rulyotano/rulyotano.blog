@@ -9,7 +9,7 @@ on:
 
 env:
   VERSION: 0.0.2
-
+# changes
 jobs:
   build-push-image:
     name: Build and push image
