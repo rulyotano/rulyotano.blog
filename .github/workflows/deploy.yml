@@ -15,7 +15,7 @@ jobs:
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.DOCKER_SSH_PRIVATE_KEY }}
           script: |
-            wget https://raw.githubusercontent.com/rulyotano/rulyotano.blog/master/docker-compose.production.yml -O docker-compose.yml
+            wget https://raw.githubusercontent.com/rulyotano/rulyotano.blog/main/docker-compose.production.yml -O docker-compose.yml
             docker stack deploy -c docker-compose.yml blog
             rm docker-compose.*
     
