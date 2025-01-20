@@ -8,7 +8,7 @@ on:
       - .github/workflows/build.yml
 
 env:
-  VERSION: 0.0.10
+  VERSION: 0.0.11
 
 jobs:
   build-push-image:

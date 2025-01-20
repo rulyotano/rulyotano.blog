@@ -10,4 +10,7 @@ RUN ["/bin/chmod", "1777", "/var/www/html/modules"]
 COPY "./.docker/files/google_tag-2.0.7.tar.gz" "/var/www/html/modules/google_tag-2.0.7.tar.gz"
 RUN ["tar",  "-xf",  "/var/www/html/modules/google_tag-2.0.7.tar.gz", "-C",  "/var/www/html/modules/"]
 RUN ["rm", "/var/www/html/modules/google_tag-2.0.7.tar.gz"]
+COPY "./.docker/files/google_analytics-4.0.3.tar.gz" "/var/www/html/modules/google_analytics-4.0.3.tar.gz"
+RUN ["tar",  "-xf",  "/var/www/html/modules/google_analytics-4.0.3.tar.gz", "-C",  "/var/www/html/modules/"]
+RUN ["rm", "/var/www/html/modules/google_analytics-4.0.3.tar.gz"]
 USER www-data:www-data
