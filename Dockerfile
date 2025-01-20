@@ -7,4 +7,5 @@ RUN ["/bin/chown", "www-data:www-data", "/opt/drupal/web/sites/default/files"]
 RUN ["/bin/chmod", "1777", "/opt/drupal/web/sites/default/files"]
 RUN ["/bin/chown", "www-data:www-data", "/var/www/html/modules"]
 RUN ["/bin/chmod", "1777", "/var/www/html/modules"]
+RUN ["composer", "require", "drupal/google_tag:^2.0"]
 USER www-data:www-data
