@@ -10,6 +10,8 @@ on:
 env:
   VERSION: 0.1.1
 
+# force build
+
 jobs:
   build-push-image:
     name: Build and push image
