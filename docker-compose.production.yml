@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   blog-drupal:
-    image: rulyotano/drupal-11:0.0.11
+    image: rulyotano/drupal-11:0.1.0
     deploy:
       replicas: 1      
       placement:
@@ -26,7 +26,7 @@ services:
       # - drupal-modules:/var/www/html/modules
       - drupal-profiles:/var/www/html/profiles
       - drupal-sites:/var/www/html/sites
-      - drupal-themes:/var/www/html/themes
+      # - drupal-themes:/var/www/html/themes
 
 networks:
   traefik:
@@ -40,6 +40,4 @@ volumes:
   drupal-profiles:
     external: true
   drupal-sites:
-    external: true
-  drupal-themes:
     external: true
