@@ -1,4 +1,4 @@
-FROM drupal:11.3.5-php8.5-fpm-trixie
+FROM drupal:11.2.3-php8.3-apache-bullseye
 RUN ["/bin/cp", "/opt/drupal/web/sites/default/default.settings.php", "/opt/drupal/web/sites/default/settings.php"]
 RUN ["/bin/chmod", "1777", "/opt/drupal/web/sites/default/settings.php"]
 RUN ["/bin/mkdir", "-p", "/opt/drupal/web/sites/default/files"]

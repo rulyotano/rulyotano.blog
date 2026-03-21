@@ -1,12 +1,12 @@
 version: "3.9"
 services:
   blog-drupal:
-    image: rulyotano/drupal-11:0.1.3
+    image: rulyotano/drupal-11:0.1.5
     deploy:
-      replicas: 1
+      replicas: 2
       placement:
-        constraints:
-          - node.hostname==rulyotano2
+        preferences:
+          - spread: node.hostname
       restart_policy:
         condition: on-failure
       labels:
