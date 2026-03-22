@@ -3,10 +3,10 @@ services:
   blog-drupal:
     image: rulyotano/drupal-11:0.1.5
     deploy:
-      replicas: 2
+      replicas: 1
       placement:
-        preferences:
-          - spread: node.hostname
+        constraints:
+          - node.hostname==rulyotano2
       restart_policy:
         condition: on-failure
       labels:
